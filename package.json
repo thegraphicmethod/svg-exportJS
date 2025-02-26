@@ -3,11 +3,12 @@
   "type": "module",
   "version": "1.2.0",
   "description": "Javascript SVG parser and renderer on Canvas with export capabilities",
-  "main": "dist/svg-export.min.js",
-  "module": "src/svg-export.js",
+  "source": "src/svg-export.js",
+  "module": "dist/svg-export.module.js",
+  "unpkg": "dist/svg-export.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "uglifyjs  ./src/svg-export.js > ./dist/svg-export.min.js"
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "keywords": [
     "svg",
@@ -24,13 +25,13 @@
     "url": "git+https://github.com/yourusername/svg-export.git"
   },
   "devDependencies": {
-    "uglify-js": "^3.19.3"
+    "microbundle": "^0.15.1"
   },
   "peerDependencies": {
     "canvg": "^4.0.1",
     "pdfkit": "^0.13.0",
-    "svg-to-pdfkit": "^0.1.8",
-    "svg-text-to-path": "^2.0.2"
+    "svg-text-to-path": "^2.0.2",
+    "svg-to-pdfkit": "^0.1.8"
   },
   "peerDependenciesMeta": {
     "canvg": {

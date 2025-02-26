@@ -10,7 +10,7 @@
         integrity="sha256-bFrIR3MiIsKhM2EDZdTJ3eY7iSluq1W7e6dNVwScEYw=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/svg-to-pdfkit@0.1.8/source.js"
         integrity="sha256-NaOoypZxJFnz2e4IeMtA9+UMZ5Fh85ljICcUts98jqY=" crossorigin="anonymous"></script>
-    <script src="../../dist/svg-export.min.js"></script>
+    <script src="../../dist/svg-export.umd.js"></script>
     <script src="./svg-text-to-path-fontkit.js"></script>
     <style>
         .container {
@@ -132,6 +132,7 @@
         const svg = document.getElementById('demo-svg');
 
         window.exportSVG = function (text2Path = false) {
+            console.log(text2Path);
             exporter.downloadSvg(svg, 'demo', {
                 scale: 1, useCSS: false, allowCrossOriginImages: true, convertTextToPath: text2Path, svgTextToPathSettings: {
                     fonts: {

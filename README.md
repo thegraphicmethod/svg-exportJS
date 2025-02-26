@@ -40,7 +40,9 @@ Using the module version of the library you can also use the text-to-path featur
 ### Option 2: Script Tags
 ```html
 <!-- Core library -->
-<script src="path/to/svg-export.min.js"></script>
+<script src="path/to/svg-export.umd.js"></script>
+
+
 
 <!-- Optional: For PNG/JPEG export -->
 <script src="https://cdn.skypack.dev/canvg@^4.0.0"></script>
@@ -57,7 +59,7 @@ Depending on your needs, you can use the library in different ways, importing or
 
 Basic SVG export (no dependencies required):
 ```javascript
-import SvgExport from 'svg-export';
+import SvgExport from 'svg-export.module.js';
 
 const exporter = new SvgExport();
 exporter.downloadSvg(mySvg, 'chart');
@@ -66,7 +68,7 @@ exporter.downloadSvg(mySvg, 'chart');
 With PNG/JPEG export:
 You need to import the Canvg library and the presets.
 ```javascript
-import SvgExport from 'svg-export';
+import SvgExport from 'svg-export.module.js';
 import { Canvg, presets } from 'canvg';
 
 const exporter = new SvgExport({
@@ -80,7 +82,7 @@ exporter.downloadPng(mySvg, 'chart');
 With PDF export:
 You need to import the PDFKit library, the SVG-to-PDFKit library and the blob-stream library.
 ```javascript
-import SvgExport from 'svg-export';
+import SvgExport from 'svg-export.module.js';
 import PDFDocument from 'pdfkit';
 import SVGtoPDF from 'svg-to-pdfkit';
 import blobStream from 'blob-stream';
@@ -97,7 +99,7 @@ exporter.downloadPdf(mySvg, 'chart');
 With all features:
 You need to import the Canvg library, the presets, the PDFKit library, the SVG-to-PDFKit library and the blob-stream library.
 ```javascript
-import SvgExport from 'svg-export';
+import SvgExport from 'svg-export.module.js';
 import { Canvg, presets } from 'canvg';
 import PDFDocument from 'pdfkit';
 import SVGtoPDF from 'svg-to-pdfkit';
@@ -214,7 +216,7 @@ npm install svg-text-to-path
 #### Usage with NPM/ES Modules
 
 ```javascript
-import SvgExport from 'svg-export';
+import SvgExport from 'svg-export.module.js';
 import Session from 'svg-text-to-path';
 
 const exporter = new SvgExport({

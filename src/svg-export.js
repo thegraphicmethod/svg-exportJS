@@ -438,15 +438,6 @@ class SvgExport {
     if (svgName == null) {
       svgName = "chart";
     }
-    if (options.convertTextToPath) {
-      const mysesion = new this._textToPath(svg, options.svgTextToPathSettings);
-      mysesion.replaceAll().then(() => {
-        processSvgAndDownload();
-        mysesion.destroy();
-      });
-    } else {
-      processSvgAndDownload();
-    }
 
     const processSvgAndDownload = () => {
       const svgElement = this._getSvgElement(svg);
@@ -485,6 +476,18 @@ class SvgExport {
         this.triggerDownload(url, svgName + ".svg");
       });
     };
+    
+    if (options.convertTextToPath) {
+      const mysesion = new this._textToPath(svg, options.svgTextToPathSettings);
+      mysesion.replaceAll().then(() => {
+        processSvgAndDownload();
+        mysesion.destroy();
+      });
+    } else {
+      processSvgAndDownload();
+    }
+
+    
   }
 
   async downloadRaster(svg, svgName, options, imageType) {
