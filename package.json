@@ -1,7 +1,7 @@
 {
   "name": "svg-export-forkmulti",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript SVG parser and renderer on Canvas with export capabilities. Forked and ready for multiple exports.",
   "source": "src/svg-export.js",
   "module": "dist/svg-export.module.js",
