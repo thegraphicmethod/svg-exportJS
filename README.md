@@ -5,6 +5,7 @@ It started as a minor modification to the original library to fix a bug, but has
 
 An easy-to-use client-side Javascript library to export SVG graphics from web pages and download them as an SVG file, PDF, or raster image (JPEG, PNG) format. Written in plain vanilla javascript. Originally created to export D3.js charts.
 
+Demo: https://thegraphicmethod.github.io/svg-exportJS/examples/browser/index.html
 
 ## Features
 
