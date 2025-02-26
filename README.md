@@ -5,7 +5,7 @@ It started as a minor modification to the original library to fix a bug, but has
 
 An easy-to-use client-side Javascript library to export SVG graphics from web pages and download them as an SVG file, PDF, or raster image (JPEG, PNG) format. Written in plain vanilla javascript. Originally created to export D3.js charts.
 
-Demo: https://thegraphicmethod.github.io/svg-exportJS/examples/browser/index.html
+Demo: https://thegraphicmethod.github.io/svg-exportJS-forkmulti/examples/browser/index.html
 
 ## Features
 
@@ -23,7 +23,7 @@ Demo: https://thegraphicmethod.github.io/svg-exportJS/examples/browser/index.htm
 
 ### Option 1: NPM (Recommended)
 ```bash
-npm install svg-export
+npm install svg-export-forkmulti
 ```
 
 For PDF export functionality:
@@ -60,7 +60,7 @@ Depending on your needs, you can use the library in different ways, importing or
 
 Basic SVG export (no dependencies required):
 ```javascript
-import SvgExport from 'svg-export.module.js';
+import SvgExport from "svg-export-forkmulti";
 
 const exporter = new SvgExport();
 exporter.downloadSvg(mySvg, 'chart');
@@ -69,7 +69,7 @@ exporter.downloadSvg(mySvg, 'chart');
 With PNG/JPEG export:
 You need to import the Canvg library and the presets.
 ```javascript
-import SvgExport from 'svg-export.module.js';
+import SvgExport from "svg-export-forkmulti";
 import { Canvg, presets } from 'canvg';
 
 const exporter = new SvgExport({
@@ -83,7 +83,7 @@ exporter.downloadPng(mySvg, 'chart');
 With PDF export:
 You need to import the PDFKit library, the SVG-to-PDFKit library and the blob-stream library.
 ```javascript
-import SvgExport from 'svg-export.module.js';
+import SvgExport from "svg-export-forkmulti";
 import PDFDocument from 'pdfkit';
 import SVGtoPDF from 'svg-to-pdfkit';
 import blobStream from 'blob-stream';
@@ -100,7 +100,7 @@ exporter.downloadPdf(mySvg, 'chart');
 With all features:
 You need to import the Canvg library, the presets, the PDFKit library, the SVG-to-PDFKit library and the blob-stream library.
 ```javascript
-import SvgExport from 'svg-export.module.js';
+import SvgExport from "svg-export-forkmulti";
 import { Canvg, presets } from 'canvg';
 import PDFDocument from 'pdfkit';
 import SVGtoPDF from 'svg-to-pdfkit';
@@ -217,7 +217,7 @@ npm install svg-text-to-path
 #### Usage with NPM/ES Modules
 
 ```javascript
-import SvgExport from 'svg-export.module.js';
+import SvgExport from "svg-export-forkmulti";
 import Session from 'svg-text-to-path';
 
 const exporter = new SvgExport({

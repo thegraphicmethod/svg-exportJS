@@ -19,10 +19,16 @@
     "jpeg"
   ],
   "author": "Sharon Choong",
+  "contributors": [
+    {
+      "name": "Sergio Galán",
+      "url": "https://graphicmethod.studio"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/svg-export.git"
+    "url": "git+https://github.com/thegraphicmethod/svg-exportJS-forkmulti"
   },
   "devDependencies": {
     "microbundle": "^0.15.1"
